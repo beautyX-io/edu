@@ -16,7 +16,7 @@ export function Hero() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          RE:Content marketing
+          beautyX: Beauty Content Marketing
         </p>
 
         {/* Main Headline */}

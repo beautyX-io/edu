@@ -24,7 +24,7 @@ export function FooterCTA() {
 
         {/* Instagram Button */}
         <a
-          href="https://www.instagram.com/nak__ta__/"
+          href="https://www.instagram.com/beautyX.io/"
           target="_blank"
           rel="noopener noreferrer"
           className="
@@ -37,7 +37,7 @@ export function FooterCTA() {
           "
         >
           <Instagram className="w-5 h-5" />
-          @nak__ta__
+          @beautyX.io
         </a>
       </div>
     </section>

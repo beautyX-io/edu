@@ -44,9 +44,9 @@ export function ContentGrid({ category }: ContentGridProps) {
                 transitionDelay: isVisible ? `${index * 80}ms` : '0ms',
               }}
             >
-              {/* RE:KIT Number */}
+              {/* BX-KIT Number */}
               <div className="text-xs font-semibold text-muted-foreground mb-3">
-                RE:KIT{item.kitNumber}
+                BX-KIT{item.kitNumber}
               </div>
 
               {/* Title */}

@@ -18,8 +18,8 @@ export function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-background/80 backdrop-blur-sm transition-colors duration-300">
       {/* Logo */}
-      <div className="font-bold text-lg tracking-tight text-foreground">
-        RE:FEEEL
+      <div className="font-bold text-lg tracking-tight text-foreground" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+        beautyX
       </div>
 
       {/* Center - Category Dropdown */}
@@ -36,7 +36,7 @@ export function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
         >
           <DropdownMenuItem className="flex flex-col items-start py-2 cursor-pointer">
             <span className="font-medium">묣 콘텐츠</span>
-            <span className="text-xs text-muted-foreground">RE:KIT</span>
+            <span className="text-xs text-muted-foreground">BX-KIT</span>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex flex-col items-start py-2 cursor-pointer">
             <span className="font-medium">풀버전</span>
