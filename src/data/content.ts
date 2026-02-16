@@ -33,7 +33,7 @@ export const contentItems: ContentItem[] = [
     description: '가성비를 넘어 고객의 심리적 만족을 장악하는 3단계 \'전문가 중심\' 서비스 설계법',
     tags: ['오마카세브랜딩', '상담교육', '심리만족'],
     category: 'marketing',
-    link: 'https://heavy-mat-a21.notion.site/309285dd46ed80dfa4bdce09d05097c1',
+    link: 'https://beautyx.oopy.io/edu/mkit1',
   },
   {
     id: 'marketing-4',
