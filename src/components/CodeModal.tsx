@@ -25,27 +25,28 @@ export function CodeModal({ isOpen, onClose, onSubmit, isMasterUnlock = false }:
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 pt-20 sm:pt-4 overflow-y-auto">
-      {/* Backdrop */}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+      {/* Backdrop - close on click */}
       <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0"
         onClick={onClose}
       />
       
       {/* Modal */}
-      <div className="relative bg-background/95 backdrop-blur-xl rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+      <div className="relative bg-white dark:bg-gray-900 rounded-3xl p-8 w-full max-w-[380px] shadow-2xl z-10 mx-auto">
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 p-1.5 rounded-full hover:bg-muted transition-colors"
+          className="absolute top-5 right-5 p-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          type="button"
         >
-          <X className="w-4 h-4 text-muted-foreground" />
+          <X className="w-5 h-5 text-gray-400" />
         </button>
 
         {/* Title */}
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <span className="text-xl">🔒</span>
-          <h2 className="text-lg font-bold text-foreground">
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <span className="text-2xl">🔒</span>
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white">
             {isMasterUnlock ? '전체 잠금 해제' : '코드 입력'}
           </h2>
         </div>
@@ -57,27 +58,28 @@ export function CodeModal({ isOpen, onClose, onSubmit, isMasterUnlock = false }:
           onChange={(e) => setCode(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder="코드를 입력하세요"
-          className="w-full px-4 py-2.5 mb-3 rounded-xl bg-muted text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight-purple text-sm"
+          className="w-full px-5 py-4 mb-4 rounded-2xl border-2 border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:border-purple-400 dark:focus:border-purple-600 text-base transition-colors"
           autoFocus
         />
 
         {/* Submit button */}
         <button
           onClick={handleSubmit}
-          className="w-full py-2.5 rounded-xl bg-highlight-purple hover:brightness-110 text-white font-medium transition-all hover:scale-[1.02] active:scale-[0.98] text-sm"
+          type="button"
+          className="w-full py-4 rounded-2xl bg-purple-500 hover:bg-purple-600 text-white font-semibold transition-all active:scale-[0.98] text-base shadow-md"
         >
           확인
         </button>
 
         {/* Instagram link */}
-        <div className="mt-4 pt-4 border-t border-border">
+        <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
           <a
             href="https://www.instagram.com/beautyX.io/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
+            className="flex items-center justify-center gap-2 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
           >
-            <Instagram className="w-3.5 h-3.5" />
+            <Instagram className="w-4 h-4" />
             <span>아직 공개 전입니다</span>
           </a>
         </div>
