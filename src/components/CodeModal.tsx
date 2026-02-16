@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Instagram } from 'lucide-react';
 
 interface CodeModalProps {
@@ -24,8 +25,8 @@ export function CodeModal({ isOpen, onClose, onSubmit, isMasterUnlock = false }:
     }
   };
 
-  return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+  const modalContent = (
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       {/* Backdrop - close on click */}
       <div 
         className="absolute inset-0"
@@ -86,4 +87,6 @@ export function CodeModal({ isOpen, onClose, onSubmit, isMasterUnlock = false }:
       </div>
     </div>
   );
+
+  return createPortal(modalContent, document.body);
 }
