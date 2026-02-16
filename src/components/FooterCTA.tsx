@@ -19,7 +19,7 @@ export function FooterCTA() {
       >
         {/* CTA Text */}
         <p className="text-base font-medium text-foreground mb-4">
-          릴스에서 <span className="font-bold">묣 코드</span>를 받아보세요!
+          릴스에서 <span className="font-bold">자료 코드</span>를 받아보세요
         </p>
 
         {/* Instagram Button */}
