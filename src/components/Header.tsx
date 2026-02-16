@@ -6,14 +6,27 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { CodeModal } from './CodeModal';
 
 interface HeaderProps {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
+  onMasterUnlock: () => void;
 }
 
-export function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
+export function Header({ isDarkMode, toggleDarkMode, onMasterUnlock }: HeaderProps) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [showMasterCodeModal, setShowMasterCodeModal] = useState(false);
+
+  const handleMasterCodeSubmit = (code: string) => {
+    if (code === 'beautyxedu') {
+      onMasterUnlock();
+      setShowMasterCodeModal(false);
+      alert('전체 강의가 잠금 해제되었습니다!');
+    } else {
+      alert('코드가 올바르지 않습니다.');
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-background/80 backdrop-blur-sm transition-colors duration-300">
@@ -52,8 +65,9 @@ export function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
       {/* Right - Icons */}
       <div className="flex items-center gap-2">
         <button 
+          onClick={() => setShowMasterCodeModal(true)}
           className="p-2 rounded-full hover:bg-muted transition-colors focus:outline-none"
-          aria-label="Lock"
+          aria-label="Master Unlock"
         >
           <Lock className="w-5 h-5 text-foreground" />
         </button>
@@ -69,6 +83,13 @@ export function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
           )}
         </button>
       </div>
+
+      <CodeModal
+        isOpen={showMasterCodeModal}
+        onClose={() => setShowMasterCodeModal(false)}
+        onSubmit={handleMasterCodeSubmit}
+        isMasterUnlock={true}
+      />
     </header>
   );
 }

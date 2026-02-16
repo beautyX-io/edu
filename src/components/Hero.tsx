@@ -37,7 +37,7 @@ export function Hero() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            사업자의 마케팅{' '}
+            뷰티샵의 마케팅{' '}
             <span className="inline-block bg-highlight-mint dark:bg-highlight-mint/80 px-2 py-0.5 rounded-lg">
               공식
             </span>

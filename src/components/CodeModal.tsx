@@ -5,9 +5,10 @@ interface CodeModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSubmit: (code: string) => void;
+  isMasterUnlock?: boolean;
 }
 
-export function CodeModal({ isOpen, onClose, onSubmit }: CodeModalProps) {
+export function CodeModal({ isOpen, onClose, onSubmit, isMasterUnlock = false }: CodeModalProps) {
   const [code, setCode] = useState('');
 
   if (!isOpen) return null;
@@ -44,7 +45,9 @@ export function CodeModal({ isOpen, onClose, onSubmit }: CodeModalProps) {
         {/* Title */}
         <div className="flex items-center justify-center gap-2 mb-6">
           <span className="text-2xl">🔒</span>
-          <h2 className="text-xl font-bold text-foreground">코드 입력</h2>
+          <h2 className="text-xl font-bold text-foreground">
+            {isMasterUnlock ? '전체 잠금 해제' : '코드 입력'}
+          </h2>
         </div>
 
         {/* Input */}

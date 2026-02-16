@@ -10,11 +10,11 @@ import type { Category } from '@/types';
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const [isAllUnlocked, setIsAllUnlocked] = useState(false);
 
-  // Initialize dark mode based on system preference
+  // Initialize with light mode by default
   useEffect(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDarkMode(prefersDark);
+    setIsDarkMode(false);
   }, []);
 
   // Apply dark mode class to document
@@ -34,9 +34,17 @@ function App() {
     setSelectedCategory(prev => prev === category ? null : category);
   };
 
+  const handleMasterUnlock = () => {
+    setIsAllUnlocked(true);
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
-      <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      <Header 
+        isDarkMode={isDarkMode} 
+        toggleDarkMode={toggleDarkMode}
+        onMasterUnlock={handleMasterUnlock}
+      />
       
       <main className="pb-16">
         <Hero />
@@ -47,7 +55,10 @@ function App() {
         
         {!selectedCategory && <InstructionText />}
         
-        <ContentGrid category={selectedCategory} />
+        <ContentGrid 
+          category={selectedCategory}
+          isAllUnlocked={isAllUnlocked}
+        />
         
         <FooterCTA />
       </main>

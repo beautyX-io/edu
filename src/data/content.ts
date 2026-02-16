@@ -34,6 +34,8 @@ export const contentItems: ContentItem[] = [
     tags: ['오마카세브랜딩', '상담교육', '심리만족'],
     category: 'marketing',
     link: 'https://beautyx.oopy.io/edu/mkit1',
+    isLocked: true,
+    code: '1110',
   },
   {
     id: 'marketing-4',

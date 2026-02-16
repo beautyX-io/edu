@@ -6,9 +6,10 @@ import { CodeModal } from './CodeModal';
 
 interface ContentGridProps {
   category: Category | null;
+  isAllUnlocked: boolean;
 }
 
-export function ContentGrid({ category }: ContentGridProps) {
+export function ContentGrid({ category, isAllUnlocked }: ContentGridProps) {
   const [filteredItems, setFilteredItems] = useState<ContentItem[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState<ContentItem | null>(null);
@@ -39,7 +40,7 @@ export function ContentGrid({ category }: ContentGridProps) {
   };
 
   const handleItemClick = (item: ContentItem) => {
-    if (item.isLocked && !unlockedItems.has(item.id)) {
+    if (item.isLocked && !unlockedItems.has(item.id) && !isAllUnlocked) {
       setSelectedItem(item);
       setShowCodeModal(true);
     } else if (item.link) {
@@ -87,7 +88,7 @@ export function ContentGrid({ category }: ContentGridProps) {
         >
           <div className="flex gap-4 pb-2">
             {filteredItems.map((item, index) => {
-              const isLocked = item.isLocked && !unlockedItems.has(item.id);
+              const isLocked = item.isLocked && !unlockedItems.has(item.id) && !isAllUnlocked;
               
               return (
                 <button
