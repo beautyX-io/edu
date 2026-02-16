@@ -42,6 +42,8 @@ export const contentItems: ContentItem[] = [
     description: '저장이 된다고 그게 매출로 이어지는 건 아니다',
     tags: ['콘텐츠전략', '포지셔닝'],
     category: 'marketing',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'marketing-5',
@@ -50,6 +52,8 @@ export const contentItems: ContentItem[] = [
     description: '점쟁이와 마케터의 공통점. 둘 다 이 "기술"을 쓴다.',
     tags: ['심리마케팅', '카피라이팅'],
     category: 'marketing',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'marketing-6',
@@ -58,6 +62,8 @@ export const contentItems: ContentItem[] = [
     description: '대부분의 사업자가 마케팅을 실패하는 이유',
     tags: ['뇌과학', '행동경제학'],
     category: 'marketing',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'marketing-7',
@@ -66,6 +72,8 @@ export const contentItems: ContentItem[] = [
     description: '말도 안 되는 말이 12억의 매출을 만든 이유',
     tags: ['마케팅', '퍼널'],
     category: 'marketing',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'marketing-8',
@@ -74,6 +82,8 @@ export const contentItems: ContentItem[] = [
     description: '성공한 계정들을 분석해서 찾은 단 하나의 공통점.',
     tags: ['구체성', '후킹', '타겟', '마케팅'],
     category: 'marketing',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'marketing-11',
@@ -82,6 +92,8 @@ export const contentItems: ContentItem[] = [
     description: '사업자들이 매일 잊어버리는 고객의 구매 과정',
     tags: ['콘텐츠', '마케팅', '퍼널', '고객관점'],
     category: 'marketing',
+    isLocked: true,
+    code: '1234',
   },
   // Branding
   {
@@ -91,6 +103,8 @@ export const contentItems: ContentItem[] = [
     description: '팔로워가 더 많은데 누구는 폐업하고, 누군가는 30개의 지점을 오픈했다.',
     tags: ['브랜딩기초', '인스타'],
     category: 'branding',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'branding-2',
@@ -99,6 +113,8 @@ export const contentItems: ContentItem[] = [
     description: '같은 인스타그램, 완전히 다른 결과를 만드는 한 끗 차이.',
     tags: ['퍼스널브랜딩', '사업자인스타', '브랜딩전략'],
     category: 'branding',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'branding-13',
@@ -107,6 +123,8 @@ export const contentItems: ContentItem[] = [
     description: '한 번도 본 적 없는 잠재 고객의 마음을 읽는 법',
     tags: ['타겟', '마케팅', '카피라이팅'],
     category: 'branding',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'branding-14',
@@ -115,6 +133,8 @@ export const contentItems: ContentItem[] = [
     description: '아무리 좋은 것도 촌스러운 폰트로 말하면 그냥 싸구려처럼 보인다.',
     tags: ['폰트', '브랜딩', '디자인', '콘텐츠', '인스타그램'],
     category: 'branding',
+    isLocked: true,
+    code: '1234',
   },
   // Content
   {
@@ -124,6 +144,8 @@ export const contentItems: ContentItem[] = [
     description: '당신의 첫인상을 망치는데 가장 큰 요인',
     tags: ['릴스편집', '톤앤매너'],
     category: 'content',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'content-10',
@@ -132,6 +154,8 @@ export const contentItems: ContentItem[] = [
     description: '내 말투 × 성공 공식, AI가 학습하게 만드는 법',
     tags: ['AI자동화', '릴스시나리오', '콘텐츠'],
     category: 'content',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'content-12',
@@ -140,6 +164,8 @@ export const contentItems: ContentItem[] = [
     description: '전환율을 높이는 자동화 CTA 설계법',
     tags: ['자동화', '마케팅', 'CTA', '전환율'],
     category: 'content',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'content-15',
@@ -148,6 +174,8 @@ export const contentItems: ContentItem[] = [
     description: '프로필 셋팅만 다르게 합도 전환율이 다르다',
     tags: ['인스타그램', 'SNS', '마케팅', '브랜딩'],
     category: 'content',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'content-16',
@@ -156,6 +184,8 @@ export const contentItems: ContentItem[] = [
     description: '콘텐츠 기획할 때 저장필두고 꺼내 쓰는 2가지 설득 구조',
     tags: ['콘텐츠', '설득', '템플릿'],
     category: 'content',
+    isLocked: true,
+    code: '1234',
   },
   {
     id: 'content-17',
@@ -164,5 +194,7 @@ export const contentItems: ContentItem[] = [
     description: 'AI로 묣 음원을 만드는 가장 쉬운 방법. Suno 프롬프트 가이드 & 용어 사전',
     tags: ['릴스', '음원', 'AI', 'Suno'],
     category: 'content',
+    isLocked: true,
+    code: '1234',
   },
 ];

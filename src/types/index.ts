@@ -8,6 +8,8 @@ export interface ContentItem {
   tags: string[];
   category: Category;
   link?: string;
+  isLocked?: boolean;
+  code?: string;
 }
 
 export interface CategoryConfig {

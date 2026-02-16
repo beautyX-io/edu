@@ -16,20 +16,21 @@ export function CategoryCards({ selectedCategory, onSelectCategory }: CategoryCa
   }, []);
 
   return (
-    <section className="py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+    <section className="py-8">
+      <div className="w-full overflow-x-auto scrollbar-hide">
+        <div className="flex gap-4 px-4 sm:px-6 lg:px-8 pb-2">
           {categories.map((category, index) => (
             <button
               key={category.id}
               onClick={() => onSelectCategory(category.id)}
               className={`
-                relative aspect-square rounded-3xl p-6 flex flex-col items-center justify-center
+                relative flex-shrink-0 w-[280px] h-[280px] rounded-3xl p-6 
+                flex flex-col items-center justify-center
                 transition-all duration-300 ease-out
                 hover:scale-[1.03] hover:shadow-xl
                 active:scale-[0.98]
                 ${category.bgColor}
-                ${selectedCategory === category.id ? 'ring-4 ring-offset-2 ring-white/50 dark:ring-white/30' : ''}
+                ${selectedCategory === category.id ? 'ring-4 ring-offset-2 ring-foreground/20' : ''}
                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
               `}
               style={{
@@ -40,12 +41,12 @@ export function CategoryCards({ selectedCategory, onSelectCategory }: CategoryCa
               <div className="absolute top-4 left-4 w-2 h-2 rounded-full bg-black/80" />
               
               {/* Category Label */}
-              <span className="text-white text-xl sm:text-2xl font-semibold mb-3">
+              <span className="text-white text-2xl font-semibold mb-3">
                 {category.label}
               </span>
               
               {/* Sublabel pill */}
-              <span className="px-3 py-1 rounded-full bg-black/20 text-white text-xs font-medium">
+              <span className="px-4 py-1.5 rounded-full bg-black/20 text-white text-sm font-medium">
                 {category.sublabel}
               </span>
             </button>
