@@ -7,6 +7,7 @@ export interface ContentItem {
   description: string;
   tags: string[];
   category: Category;
+  link?: string;
 }
 
 export interface CategoryConfig {

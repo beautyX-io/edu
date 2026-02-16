@@ -27,12 +27,13 @@ export const categories: CategoryConfig[] = [
 export const contentItems: ContentItem[] = [
   // Marketing
   {
-    id: 'marketing-3',
-    kitNumber: 3,
-    title: '노출이 매출이 되는 3단계',
-    description: '조회수를 매출로 바꾸는 전략',
-    tags: ['퍼널전략'],
+    id: 'marketing-1',
+    kitNumber: 1,
+    title: '헤어 오마카세의 시대: 고객이 기꺼이 지갑을 여는 전문가의 기술',
+    description: '가성비를 넘어 고객의 심리적 만족을 장악하는 3단계 \'전문가 중심\' 서비스 설계법',
+    tags: ['오마카세브랜딩', '상담교육', '심리만족'],
     category: 'marketing',
+    link: 'https://heavy-mat-a21.notion.site/309285dd46ed80dfa4bdce09d05097c1',
   },
   {
     id: 'marketing-4',
