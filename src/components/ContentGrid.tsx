@@ -64,7 +64,8 @@ export function ContentGrid({ category, isAllUnlocked }: ContentGridProps) {
 
   return (
     <section className="py-8">
-      <div className="relative">
+      {/* Mobile: Horizontal scroll with arrows */}
+      <div className="lg:hidden relative">
         {/* Left scroll button */}
         <button
           onClick={() => scroll('left')}
@@ -81,10 +82,10 @@ export function ContentGrid({ category, isAllUnlocked }: ContentGridProps) {
           <ChevronRight className="w-5 h-5 text-foreground" />
         </button>
 
-        {/* Content cards */}
+        {/* Content cards - Mobile */}
         <div 
           ref={scrollRef}
-          className="overflow-x-auto scrollbar-hide px-4 sm:px-6 lg:px-8"
+          className="overflow-x-auto scrollbar-hide px-4 sm:px-6"
         >
           <div className="flex gap-4 pb-2">
             {filteredItems.map((item, index) => {
@@ -148,6 +149,72 @@ export function ContentGrid({ category, isAllUnlocked }: ContentGridProps) {
               );
             })}
           </div>
+        </div>
+      </div>
+
+      {/* Desktop: Centered grid */}
+      <div className="hidden lg:block max-w-6xl mx-auto px-8">
+        <div className="grid grid-cols-2 gap-4">
+          {filteredItems.map((item, index) => {
+            const isLocked = item.isLocked && !unlockedItems.has(item.id) && !isAllUnlocked;
+            
+            return (
+              <button
+                key={item.id}
+                onClick={() => handleItemClick(item)}
+                className={`
+                  relative p-6 rounded-2xl border
+                  bg-card border-border hover:border-muted-foreground/30
+                  transition-all duration-300 ease-out
+                  hover:-translate-y-1 hover:shadow-lg
+                  text-left
+                  ${isLocked ? 'opacity-60' : ''}
+                  ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
+                `}
+                style={{
+                  transitionDelay: isVisible ? `${index * 80}ms` : '0ms',
+                }}
+              >
+                {/* Lock icon */}
+                {isLocked && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="p-4 rounded-full bg-background/80 backdrop-blur-sm">
+                      <Lock className="w-8 h-8 text-muted-foreground" />
+                    </div>
+                  </div>
+                )}
+
+                {/* KIT Number */}
+                <div className={`text-xs font-semibold mb-3 ${isLocked ? 'text-muted-foreground/50' : 'text-muted-foreground'}`}>
+                  {item.category === 'marketing' && item.kitNumber === 1 
+                    ? `M-KIT${item.kitNumber}`
+                    : `BX-KIT${item.kitNumber}`}
+                </div>
+
+                {/* Title */}
+                <h3 className={`text-base font-bold mb-2 leading-tight ${isLocked ? 'text-muted-foreground' : 'text-foreground'}`}>
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className={`text-sm mb-4 leading-relaxed ${isLocked ? 'text-muted-foreground/70' : 'text-muted-foreground'}`}>
+                  {item.description}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2">
+                  {item.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className={`text-xs ${isLocked ? 'text-muted-foreground/50' : 'text-muted-foreground'}`}
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </button>
+            );
+          })}
         </div>
       </div>
 
