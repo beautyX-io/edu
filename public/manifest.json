@@ -1,0 +1,24 @@
+{
+  "short_name": "beautyX",
+  "name": "beautyX - 뷰티 전문가 마케팅 플랫폼",
+  "description": "뷰티 전문가를 위한 마케팅 & 브랜딩 콘텐츠 플랫폼",
+  "icons": [
+    {
+      "src": "/edu/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/edu/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/edu/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "orientation": "portrait"
+}
