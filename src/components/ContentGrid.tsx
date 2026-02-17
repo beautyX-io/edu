@@ -121,6 +121,8 @@ export function ContentGrid({ category, isAllUnlocked }: ContentGridProps) {
                   <div className={`text-xs font-semibold mb-3 ${isLocked ? 'text-muted-foreground/50' : 'text-muted-foreground'}`}>
                     {item.category === 'marketing' && item.kitNumber === 1 
                       ? `M-KIT${item.kitNumber}`
+                      : item.category === 'branding' && item.kitNumber === 1
+                      ? `B-NP-KIT${item.kitNumber}`
                       : `BX-KIT${item.kitNumber}`}
                   </div>
 
@@ -188,6 +190,8 @@ export function ContentGrid({ category, isAllUnlocked }: ContentGridProps) {
                 <div className={`text-xs font-semibold mb-3 ${isLocked ? 'text-muted-foreground/50' : 'text-muted-foreground'}`}>
                   {item.category === 'marketing' && item.kitNumber === 1 
                     ? `M-KIT${item.kitNumber}`
+                    : item.category === 'branding' && item.kitNumber === 1
+                    ? `B-NP-KIT${item.kitNumber}`
                     : `BX-KIT${item.kitNumber}`}
                 </div>
 

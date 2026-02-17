@@ -101,12 +101,13 @@ export const contentItems: ContentItem[] = [
   {
     id: 'branding-1',
     kitNumber: 1,
-    title: '오프라인 사업자가 해야하는 브랜딩은 따로 있다',
-    description: '팔로워가 더 많은데 누구는 폐업하고, 누군가는 30개의 지점을 오픈했다.',
-    tags: ['브랜딩기초', '인스타'],
+    title: '"답글 하나로 재방문 35% 상승", 팬을 만드는 브랜딩 한 끗',
+    description: '단순한 인사를 넘어 잠재 고객이 우리 매장을 선택하게 만드는 전략적 답변 설계법',
+    tags: ['매장브랜딩', '플레이스교육', '네이버예약리뷰교육'],
     category: 'branding',
+    link: 'https://beautyx.oopy.io/edu/bnpkit1',
     isLocked: true,
-    code: '1234',
+    code: '0952',
   },
   {
     id: 'branding-2',
