@@ -116,8 +116,9 @@ export const contentItems: ContentItem[] = [
     description: '오늘부터 실천 가능한 시각.청각.촉각별 브랜딩 체크리스트',
     tags: ['매장브랜딩', '서비스교육'],
     category: 'branding',
+    link: 'https://beautyx.oopy.io/edu/b-s-kit1',
     isLocked: true,
-    code: '1234',
+    code: '0331',
   },
   {
     id: 'branding-13',
