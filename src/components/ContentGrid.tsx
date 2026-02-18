@@ -123,6 +123,8 @@ export function ContentGrid({ category, isAllUnlocked }: ContentGridProps) {
                       ? `M-KIT${item.kitNumber}`
                       : item.category === 'branding' && item.kitNumber === 1
                       ? `B-NP-KIT${item.kitNumber}`
+                      : item.category === 'branding' && item.kitNumber === 2
+                      ? `B-S-KIT${item.kitNumber}`
                       : `BX-KIT${item.kitNumber}`}
                   </div>
 
@@ -192,6 +194,8 @@ export function ContentGrid({ category, isAllUnlocked }: ContentGridProps) {
                     ? `M-KIT${item.kitNumber}`
                     : item.category === 'branding' && item.kitNumber === 1
                     ? `B-NP-KIT${item.kitNumber}`
+                    : item.category === 'branding' && item.kitNumber === 2
+                    ? `B-S-KIT${item.kitNumber}`
                     : `BX-KIT${item.kitNumber}`}
                 </div>
 

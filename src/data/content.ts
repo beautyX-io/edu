@@ -112,9 +112,9 @@ export const contentItems: ContentItem[] = [
   {
     id: 'branding-2',
     kitNumber: 2,
-    title: '요즘 사업자들의 인스타 트렌드',
-    description: '같은 인스타그램, 완전히 다른 결과를 만드는 한 끗 차이.',
-    tags: ['퍼스널브랜딩', '사업자인스타', '브랜딩전략'],
+    title: '머리는 잘 나왔는데 왜 안 올까? 다시 오게 만드는 \'신선한 경험\'의 비밀',
+    description: '오늘부터 실천 가능한 시각.청각.촉각별 브랜딩 체크리스트',
+    tags: ['매장브랜딩', '서비스교육'],
     category: 'branding',
     isLocked: true,
     code: '1234',
